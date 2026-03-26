@@ -83,8 +83,26 @@
 │   │   ├── style.css      # 全局样式
 │   │   └── components/    # 自定义组件
 │   └── sidebar.ts         # 导航配置
+├── deno.json              # Deno 配置
+├── main.ts                # Deno Deploy 入口文件
 └── package.json
 ```
+
+### 部署平台选择: Deno Deploy
+
+**选择**: 使用 Deno Deploy 进行静态站点托管
+
+**理由**:
+- 原生支持 Deno 运行时，与现代前端工具链兼容性良好
+- 全球边缘网络，访问速度快
+- 与 GitHub 集成简单，支持自动部署
+- 免费额度充足，适合文档类网站
+- 支持自定义域名和 HTTPS
+
+**替代方案考虑**:
+- **Vercel**: 功能丰富但对 VitePress 的缓存处理有时需要额外配置
+- **Cloudflare Pages**: 性能优秀但构建环境限制较多
+- **GitHub Pages**: 免费但缺乏边缘部署能力，国内访问速度一般
 
 ## Risks / Trade-offs
 
@@ -98,9 +116,14 @@
 
 本项目为全新项目，无需迁移。部署流程：
 1. 本地开发测试
-2. 构建静态文件
-3. 部署到 Vercel/Cloudflare Pages
+2. 构建静态文件（VitePress 生成到 docs/.vitepress/dist）
+3. 使用 Deno Deploy 部署静态文件
 4. 配置自定义域名（可选）
+
+**Deno Deploy 部署方式**:
+- 方式一：使用 GitHub 集成，推送到主分支自动部署
+- 方式二：使用 deployctl CLI 手动部署
+- 静态文件通过 `include` 配置指定 dist 目录
 
 ## Open Questions
 

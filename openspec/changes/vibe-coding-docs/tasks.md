@@ -97,17 +97,29 @@
   - 验证所有页面正常显示
   - 验证导航功能正常
 
-## 7. 部署配置
+## 7. Deno Deploy 部署配置
 
 - [ ] 7.1 配置构建设置
   - 配置 .vitepress/config.ts 中的 build 选项
-  - 配置输出目录
-- [ ] 7.2 创建部署脚本
-  - 创建 GitHub Actions 工作流（如需要）
-  - 或配置 Vercel/Cloudflare Pages 自动部署
-- [ ] 7.3 执行构建测试
+  - 确认输出目录为 docs/.vitepress/dist
+- [ ] 7.2 创建 Deno 配置文件
+  - 创建 deno.json 配置静态文件部署
+  - 配置 include 指定 dist 目录
+- [ ] 7.3 创建部署脚本
+  - 创建 deploy.ts 作为 Deno Deploy 入口（如需 SSR）
+  - 或配置纯静态文件部署
+- [ ] 7.4 配置 GitHub 集成（推荐）
+  - 在 Deno Deploy Dashboard 创建项目
+  - 连接 GitHub 仓库
+  - 配置构建命令：`npm run docs:build`
+  - 配置输出目录：`docs/.vitepress/dist`
+- [ ] 7.5 执行构建测试
   - 运行 npm run docs:build
-  - 验证构建产物
-- [ ] 7.4 部署到生产环境
-  - 部署到目标平台
+  - 验证构建产物在 docs/.vitepress/dist
+- [ ] 7.6 部署到 Deno Deploy
+  - 推送到主分支触发自动部署
+  - 或使用 deployctl 手动部署
   - 验证线上访问正常
+- [ ] 7.7 配置自定义域名（可选）
+  - 在 Deno Deploy Dashboard 添加域名
+  - 配置 DNS 解析
