@@ -18,11 +18,14 @@
 - 定义 UI 设计系统（颜色、字体、间距）
 - 规划内容组织方式
 - 制定部署策略
+- 集成 GitHub 授权登录
+- 集成基于 GitHub Issues 的评论系统
 
 **Non-Goals:**
 - 具体教学内容的编写（仅搭建框架）
-- 用户认证系统
-- 后端 API 开发
+- ~~用户认证系统~~（使用 GitHub OAuth 纯前端实现）
+- ~~后端 API 开发~~（纯静态网站，无需后端）
+- ~~评论系统后端~~（使用 Giscus 基于 GitHub Issues）
 - 复杂的动态功能
 
 ## Decisions
@@ -103,6 +106,39 @@
 - **Vercel**: 功能丰富但对 VitePress 的缓存处理有时需要额外配置
 - **Cloudflare Pages**: 性能优秀但构建环境限制较多
 - **GitHub Pages**: 免费但缺乏边缘部署能力，国内访问速度一般
+
+### 用户认证方案: GitHub OAuth
+
+**选择**: 使用 GitHub OAuth 纯前端授权登录
+
+**理由**:
+- 无需自建后端，纯前端实现
+- Vibe Coding 目标用户基本都拥有 GitHub 账号
+- 可以获取用户基本信息（头像、用户名）用于显示
+- 与评论系统（Giscus）使用同一平台，体验一致
+
+**实现方式**:
+- 使用 GitHub OAuth App 或 GitHub App
+- 前端通过 OAuth 流程获取 access token
+- 使用 localStorage 存储登录状态
+- 提供登录/登出按钮组件
+
+### 评论系统方案: Giscus
+
+**选择**: 使用 Giscus 基于 GitHub Discussions 的评论系统
+
+**理由**:
+- 完全免费，无需自建后端
+- 数据存储在 GitHub Discussions 中，便于管理
+- 支持 Markdown、代码高亮、表情回复
+- 与 GitHub 账号体系打通，用户无需额外注册
+- 支持多主题，可适配本站设计风格
+
+**实现方式**:
+- 在仓库启用 GitHub Discussions 功能
+- 安装 Giscus GitHub App
+- 在页面中嵌入 Giscus 组件
+- 配置主题与站点风格一致
 
 ## Risks / Trade-offs
 
