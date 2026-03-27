@@ -53,7 +53,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/your-org/vibe-coding-docs' }
+      { icon: 'github', link: 'https://github.com/renzp94/vibe-coding-docs' }
     ],
 
     footer: {
