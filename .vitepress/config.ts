@@ -11,8 +11,7 @@ export default defineConfig({
   head: [
     ['meta', { name: 'author', content: 'Vibe Coding Team' }],
     ['meta', { name: 'keywords', content: 'Vibe Coding, AI编程, AI辅助编程, Claude, ChatGPT' }],
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['script', { src: '/theme/auth-inject.js', defer: true }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
 
   themeConfig: {
