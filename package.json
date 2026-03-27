@@ -1,0 +1,17 @@
+{
+  "name": "vibe-coding-docs",
+  "version": "1.0.0",
+  "description": "Vibe Coding 教学网站",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev .",
+    "docs:build": "vitepress build .",
+    "docs:preview": "vitepress preview ."
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  }
+}

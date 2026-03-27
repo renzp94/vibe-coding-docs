@@ -1,0 +1,12 @@
+{
+  "deploy": {
+    "project": "vibe-coding-docs",
+    "include": [
+      ".vitepress/dist/**/*"
+    ],
+    "exclude": [
+      "node_modules",
+      ".vitepress/cache"
+    ]
+  }
+}
