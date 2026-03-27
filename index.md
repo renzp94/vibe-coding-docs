@@ -6,7 +6,7 @@ hero:
   text: "掌握 AI 辅助编程"
   tagline: 让 AI 成为你的编程伙伴，释放创造力，专注于解决真正重要的问题
   image:
-    src: /hero.png
+    src: /hero.svg
     alt: Vibe Coding
   actions:
     - theme: brand
