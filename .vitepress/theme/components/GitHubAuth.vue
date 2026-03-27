@@ -27,7 +27,7 @@ const user = ref(null)
 const isLoading = ref(false)
 
 // GitHub OAuth 配置
-const GITHUB_CLIENT_ID = 'YOUR_GITHUB_CLIENT_ID' // 需要在 GitHub 应用中配置
+const GITHUB_CLIENT_ID = 'Ov23liieDa8kp8OUugOS' // 需要在 GitHub 应用中配置
 const REDIRECT_URI = typeof window !== 'undefined'
   ? `${window.location.origin}/callback`
   : ''

@@ -15,11 +15,11 @@ const giscusContainer = ref(null)
 
 // Giscus 配置
 const GISCUS_CONFIG = {
-  repo: 'your-org/vibe-coding-docs', // 替换为你的仓库
-  repoId: 'YOUR_REPO_ID', // 在 Giscus 设置中获取
+  repo: 'renzp94/vibe-coding-docs',
+  repoId: 'R_kgDORx69RQ',
   category: 'Announcements',
-  categoryId: 'YOUR_CATEGORY_ID', // 在 Giscus 设置中获取
-  mapping: 'pathname', // pathname | url | title | og:title | specific | number
+  categoryId: 'DIC_kwDORx69Rc4C5Xn8',
+  mapping: 'pathname',
   strict: '0',
   reactionsEnabled: '1',
   emitMetadata: '0',

@@ -20,7 +20,7 @@
       `
     } else {
       authContainer.innerHTML = `
-        <a href="https://github.com/login/oauth/authorize?client_id=YOUR_GITHUB_CLIENT_ID&scope=user:email"
+        <a href="https://github.com/login/oauth/authorize?client_id=Ov23liieDa8kp8OUugOS&scope=user:email"
            style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:980px;font-size:13px;font-weight:500;background:var(--vp-c-brand-1);color:white;text-decoration:none;transition:all 0.3s ease;"
            onmouseover="this.style.background='var(--vp-c-brand-2)'"
            onmouseout="this.style.background='var(--vp-c-brand-1)'">
